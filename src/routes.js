@@ -14,7 +14,7 @@ const {
   documents_post
 } = require('./controller')
 
-router.route('/documents')
+router.route('/:collection/documents')
   .get(documents_get_all)
 //   .post(upload.single('file'), func)
   .post(
@@ -23,7 +23,7 @@ router.route('/documents')
     documents_post
   )
 
-router.route('/documents/:docid')
+router.route('/:collection/documents/:docid')
   .get(documents_get_one)
   
 module.exports = router
